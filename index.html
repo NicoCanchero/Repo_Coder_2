@@ -20,6 +20,7 @@
         margin-top: 10px;
       }
       #intentos {
+        display: none; /* Ocultar inicialmente*/
         margin-top: 20px;
         font-size: 18px;
         font-weight: bold;
@@ -33,10 +34,23 @@
         font-weight: bold;
         margin-top: 10px;
       }
+      #recordJugador {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
     </style>
   </head>
   <body>
-    <button id="iniciarJuego">Iniciar Juego</button>
+    <button id="cambiarNombre">Cambiar nombre</button>
+    <input
+      type="text"
+      id="inputNombre"
+      placeholder="Ingresa tu nombre"
+      style="display: none"
+    />
+    <button id="botonNombre" style="display: none">Confirmar Nombre</button>
+    <button id="iniciarJuego" style="display: none">Iniciar Juego</button>
     <div id="nombreJugador"></div>
     <input
       type="number"
@@ -48,6 +62,10 @@
     />
     <button id="botonIntentar" style="display: none">Adivinar</button>
     <div id="intentos">Intentos previos:</div>
+    <div id="recordJugador">
+      <span id="recordNombre"></span>
+      <span id="mejorIntento">N/A</span>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
